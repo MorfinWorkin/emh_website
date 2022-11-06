@@ -33,7 +33,7 @@
   <sodipodiNamedview
      pageColor="#ffffff"
      borderColor="#666666"
-     borderOpacity="1"
+     borderOpacity="0"
      objectTolerance="10"
      gridTolerance="10"
      guideTolerance="10"
@@ -55,7 +55,7 @@
      inkscapeWindowMaximized="1"
      inkscapeCurrentLayer="svg64" />
   <path
-     style="fill:#ffffff;stroke-width:1.33333337"
+     style="fill:#ffffff"
      d="m 1.33372,109.33203 0.0625,5 c 0.03444,2.75 8.00162,93.80066 17.70507,202.33399 L 36.74387,514 l 79.29492,22.20117 c 43.61211,12.21062 80.19493,22.26265 81.29493,22.33985 1.1,0.0771 38.16591,-9.87392 82.36914,-22.11329 70.87044,-19.6232 80.43786,-22.57875 80.94531,-25.00781 0.707,-3.38418 35.41255,-394.89905 35.37695,-399.08789 l -0.0254,-3 H 198.66575 Z"
      id="path118"
      inkscapeConnectorCurvature="0" />
