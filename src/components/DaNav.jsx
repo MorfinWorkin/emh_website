@@ -17,16 +17,15 @@ const DaNavContainer = styled.nav`
 const DaButton = styled.div`
   height: 100%;
   padding-inline: 1.82vw;
-  margin-block: auto;
-  border-radius: 5px;
+  margin: 0;
+  border-radius: 0px;
   background: #afafaf;
   font-weight: 500;
 
   &:hover {
     border-radius: 10px;
     background: #afafaf;
-    box-shadow: inset 3px 3px 1px #898989, inset -3px -3px 1px #d6d6d6;
-
+    box-shadow: inset 1px 1px 1px #898989, inset -1px -1px 1px #d6d6d6;
     transition: 0.5s;
   }
 `;
@@ -36,7 +35,7 @@ const DaNav = ({ children }) => {
       <DaContainer className='fluid sticky-top'>
         <DaNavContainer className='navbar navbar-expand-lg'>
           <a className='navbar-brand' href='/'>
-            <DaButton> MORFIN WORKING</DaButton>
+            <DaButton> MorfinWorking</DaButton>
           </a>
         </DaNavContainer>
       </DaContainer>
