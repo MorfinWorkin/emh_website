@@ -1,6 +1,6 @@
 import React from 'react';
 
-const DaAMT = ({ bright, color }) => {
+const DaAMT = ({ children, bright, color }) => {
   //
 
   window.frameMod = function () {
@@ -224,17 +224,17 @@ const DaAMT = ({ bright, color }) => {
       last_target.y = target.y;
     }
 
-    canvas.addEventListener(
-      'mousemove',
-      function (e) {
-        last_mouse.x = mouse.x;
-        last_mouse.y = mouse.y;
+    // canvas.addEventListener(
+    //   'mousemove',
+    //   function (e) {
+    //     last_mouse.x = mouse.x;
+    //     last_mouse.y = mouse.y;
 
-        mouse.x = e.pageX - this.offsetLeft;
-        mouse.y = e.pageY - this.offsetTop;
-      },
-      false,
-    );
+    //     mouse.x = e.pageX - this.offsetLeft;
+    //     mouse.y = e.pageY - this.offsetTop;
+    //   },
+    //   false,
+    // );
 
     canvas.addEventListener('mouseleave', function (e) {
       mouse.x = false;
@@ -277,11 +277,18 @@ const DaAMT = ({ bright, color }) => {
   };
   return (
     <canvas
-      style={{ backgroundColor: 'black' }}
+      style={{
+        backgroundColor: 'black',
+        position: 'absolute',
+        left: '0',
+        top: '0',
+        zIndex: '-1',
+        width: '100%',
+      }}
       id='myCanvas'
-      width='200'
-      height='100'
-    ></canvas>
+    >
+      {children}
+    </canvas>
   );
 };
 
