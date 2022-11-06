@@ -141,7 +141,7 @@ const DaCarousel = () => {
     if (section < 2) {
       section++;
       carousel.current.scrollLeft =
-        section * (window.innerWidth - 150) + section * 10;
+        section * (window.innerWidth - 150) + section * 5;
       updatePag();
     }
   };
@@ -150,7 +150,7 @@ const DaCarousel = () => {
     if (section > 0) {
       section--;
       carousel.current.scrollLeft =
-        section * (window.innerWidth - 150) + section * 10;
+        section * (window.innerWidth - 150) + section * 5;
       updatePag();
     }
   };
@@ -162,7 +162,7 @@ const DaCarousel = () => {
         section = index;
         updatePag();
         carousel.current.scrollLeft =
-          index * (window.innerWidth - 150) + index * 10;
+          index * (window.innerWidth - 150) + index * 5;
       });
     });
 
@@ -181,6 +181,14 @@ const DaCarousel = () => {
         <Card
           className='card'
           style={{
+            backgroundColor: '#61DAFB99',
+          }}
+        >
+          <CardImg src={logoReact} />
+        </Card>
+        <Card
+          className='card'
+          style={{
             backgroundColor: '#E44D2695',
           }}
         >
@@ -193,14 +201,6 @@ const DaCarousel = () => {
           }}
         >
           <CardImg src={logoJS} />
-        </Card>
-        <Card
-          className='card'
-          style={{
-            backgroundColor: '#61DAFB99',
-          }}
-        >
-          <CardImg src={logoReact} />
         </Card>
         <Card
           className='card'
@@ -265,12 +265,6 @@ const DaCarousel = () => {
         >
           <CardP>10</CardP>
         </Card>
-
-        <Card className='card'></Card>
-        <Card className='card'></Card>
-        <Card className='card'></Card>
-        <Card className='card'></Card>
-        <Card className='card'></Card>
       </Carousel>
       <Pagination id='pagination'>
         <Ball className='ball'></Ball>
