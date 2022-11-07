@@ -12,8 +12,8 @@ const DaDiv = styled.div`
   background: #bebebe22;
   border: ${({ border }) => (border ? '1px solid #ffffff00' : '0px')};
   border-radius: 0px;
-  backdrop-filter: blur(5.1px);
-  -webkit-backdrop-filter: blur(5.1px);
+  backdrop-filter: blur(0px);
+  -webkit-backdrop-filter: blur(0px);
   color: #fff;
   height: ${({ height }) => height};
   width: ${({ width }) => width};
