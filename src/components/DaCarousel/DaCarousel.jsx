@@ -4,6 +4,7 @@ import logoHTML5 from '../../assets/HTML5logo.svg';
 import logoJS from '../../assets/JSlogo.svg';
 import logoReact from '../../assets/ReactBadge.svg';
 import logoCSS from '../../assets/CSSlogo.svg';
+import logoThree from '../../assets/ThreeJSlogo.svg';
 
 const Wrapper = styled.div`
    {
@@ -213,11 +214,10 @@ const DaCarousel = () => {
         <Card
           className='card'
           style={{
-            backgroundImage:
-              " url('https://i.pinimg.com/originals/25/7c/66/257c66c72e969ecea6e052661897ddb2.jpg')",
+            backgroundColor: '#44444495',
           }}
         >
-          <CardP>5</CardP>
+          <CardImg src={logoThree} />
         </Card>
 
         <Card
