@@ -29,7 +29,7 @@ function App() {
           <em> &nbsp; - John Johnson</em>
         </strong>
       </h1>
-      <Container contain>
+      <Container>
         <Row>
           <img alt='Eduardo Morfin CV' src={myCV} />
         </Row>
