@@ -5,13 +5,13 @@ const DaContainer = styled.div`
   width: 100%;
   margin: auto;
   display: inline-block;
-  background-color: #afafaf;
+  background-color: #1f1f1f;
 `;
 const DaNavContainer = styled.nav`
   margin: auto;
   height: 100%;
   padding: 10px;
-  background-color: #afafaf;
+  background-color: #1f1f1f;
 `;
 
 const DaButton = styled.div`
@@ -19,13 +19,15 @@ const DaButton = styled.div`
   padding-inline: 1.82vw;
   margin: 0;
   border-radius: 0px;
-  background: #afafaf;
+  background: #1f1f1f;
   font-weight: 500;
+  font-size: 1.5rem;
+  color: #fff;
 
   &:hover {
     border-radius: 10px;
-    background: #afafaf;
-    box-shadow: inset 1px 1px 1px #898989, inset -1px -1px 1px #d6d6d6;
+    background: #afafaf10;
+    box-shadow: inset 1px 1px 1px #89898900, inset -1px -1px 1px #d6d6d650;
     transition: 0.5s;
   }
 `;
@@ -35,7 +37,7 @@ const DaNav = ({ children }) => {
       <DaContainer className='fluid sticky-top'>
         <DaNavContainer className='navbar navbar-expand-lg'>
           <a className='navbar-brand' href='/'>
-            <DaButton> MorfinWorking</DaButton>
+            <DaButton> MorfinWorking </DaButton>
           </a>
         </DaNavContainer>
       </DaContainer>
