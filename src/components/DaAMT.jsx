@@ -16,8 +16,6 @@ const DaAMT = ({ children, bright, color }) => {
     );
   };
 
-  console.log('test :>> ', window);
-
   const init = (elemid) => {
     let canvas = document.getElementById(elemid),
       c = canvas.getContext('2d'),
@@ -264,13 +262,14 @@ const DaAMT = ({ children, bright, color }) => {
       c.clearRect(0, 0, w, h);
       draw();
     }
-    const resizeME = () => {
+    const onResize = () => {
       w = canvas.width = window.innerWidth;
       h = canvas.height = window.innerHeight;
+      console.log('test :>> ', window);
       loop();
     };
 
-    window.addEventListener('resize', resizeME);
+    window.addEventListener('resize', onResize);
 
     loop();
     setInterval(loop, 1000 / 60);
