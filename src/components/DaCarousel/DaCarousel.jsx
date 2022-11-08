@@ -58,7 +58,8 @@ const CardImg = styled.img`
 `;
 
 const DaCarousel = () => {
-  const heightCalc = window.innerWidth < '950' ? 'calc(100vh / 5.8)' : '100%';
+  const heightCalc =
+    window.innerWidth < '950' ? 'calc(100vh / 5.8)' : 'calc(100vh - 200px)';
   return (
     <Container fluid>
       <Carousel>
@@ -71,11 +72,7 @@ const DaCarousel = () => {
           <Col sm={12} md={12} lg={2}>
             <Card
               className='card'
-              height={
-                window.innerWidth < '950'
-                  ? 'calc(100vh / 5.8)'
-                  : 'calc(100vh - 250px)'
-              }
+              height={heightCalc}
               style={{
                 backgroundColor: '#61DAFF99',
               }}
