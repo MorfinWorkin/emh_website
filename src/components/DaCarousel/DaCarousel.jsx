@@ -11,7 +11,8 @@ const Carousel = styled.div`
    {
     height: 100%;
     width: 100%;
-    padding: 5%;
+    padding: 3%;
+    top: 0;
     overflow: hidden;
     scroll-behavior: smooth;
     align-items: center;
