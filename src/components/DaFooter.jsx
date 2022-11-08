@@ -53,7 +53,7 @@ const DaFooter = () => {
               <Row>
                 <DaLink href='mailto:MorfinWorking@gmail.com'>
                   MorfinWorking@gmail.com &nbsp;
-                  <i class='fa-solid fa-envelope'></i>
+                  <i className='fa-solid fa-envelope'></i>
                 </DaLink>
               </Row>
             </DaButton>
@@ -68,7 +68,7 @@ const DaFooter = () => {
                 href={'https://www.linkedin.com/in/emorfinh/'}
               >
                 LinkedIn &nbsp;
-                <i class='fa-brands fa-linkedin ml-3'></i>
+                <i className='fa-brands fa-linkedin ml-3'></i>
               </DaLink>
             </DaButton>
           </Col>
