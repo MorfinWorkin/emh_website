@@ -4,6 +4,7 @@ import styled from 'styled-components';
 const DaLink = styled.a`
   color: white;
   text-decoration: none;
+  width: 100%;
   &:hover {
     color: white;
     text-decoration: none;
@@ -12,7 +13,7 @@ const DaLink = styled.a`
 
 const DaButton = styled.div`
   height: 100%;
-  width: 60%;
+  width: 100%;
   padding-left: 7%;
   margin: 0;
   border-radius: 10px;
@@ -35,33 +36,40 @@ const DaFooter = () => {
     <>
       <Container
         fluid
-        style={{ backgroundColor: '#1f1f1f', height: '20vh', padding: '3%' }}
+        style={{
+          backgroundColor: '#1f1f1f',
+          height: '20vh',
+          padding: '3%',
+          alignItems: 'center',
+        }}
       >
-        <Row>
-          <Col xs={2}>
+        <Row
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+          }}
+        >
+          <Col sm={3}>
             <DaButton>
-              <Row>
-                <DaLink target={'blank'} href='https://github.com/MorfinWorkin'>
-                  GitHub &nbsp;
-                  <i className='fa-brands fa-github'></i>
-                </DaLink>
-              </Row>
+              <DaLink target={'blank'} href='https://github.com/MorfinWorkin'>
+                GitHub &nbsp;
+                <i className='fa-brands fa-github'></i>
+              </DaLink>
             </DaButton>
           </Col>
-          <Col xs={5}>
+          <Col sm={6}>
             <DaButton>
-              <Row>
-                <DaLink href='mailto:MorfinWorking@gmail.com'>
-                  MorfinWorking@gmail.com &nbsp;
-                  <i className='fa-solid fa-envelope'></i>
-                </DaLink>
-              </Row>
+              <DaLink href='mailto:MorfinWorking@gmail.com'>
+                morfinworking@gmail.com &nbsp;
+                <i className='fa-solid fa-envelope'></i>
+              </DaLink>
             </DaButton>
           </Col>
-        </Row>
-        <br />
-        <Row>
-          <Col xs={2}>
+
+          <br />
+
+          <Col sm={3}>
             <DaButton>
               <DaLink
                 target={'blank'}
