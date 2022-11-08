@@ -12,6 +12,7 @@ const Wrapper = styled.div`
     background-color: #29292960;
     display: grid;
     place-items: center;
+    width: 100vw;
     height: 100vh;
     font-family: 'Montserrat', sans-serif;
   }
@@ -21,7 +22,7 @@ const Carousel = styled.div`
    {
     height: calc(100vh - 150px);
     width: calc(100vw - 250px);
-    margin: auto;
+    margin: 0;
     overflow: hidden;
     scroll-behavior: smooth;
     display: flex;
@@ -162,17 +163,24 @@ const DaCarousel = () => {
         //eslint-disable-next-line
         section = index;
         updatePag();
-        carousel.current.scrollLeft =
-          index * (window.innerWidth - 150) + index * 5;
+        carousel.current.scrollLeft = index * (window.innerWidth - 150) + index;
       });
     });
-
-    leftBtn.current.addEventListener('click', leftBtnListener);
-    rightBtn.current.addEventListener('click', rightBtnListener);
+    leftBtn.current?.addEventListener('click', leftBtnListener);
+    rightBtn.current?.addEventListener('click', rightBtnListener);
     return () => {
       /*eslint-disable*/
-      leftBtn.current.removeEventListener('click', leftBtnListener);
-      rightBtn.current.removeEventListener('click', rightBtnListener);
+      pagination.forEach((curItem, index) => {
+        curItem.removeEventListener('click', () => {
+          //eslint-disable-next-line
+          section = index;
+          updatePag();
+          carousel.current.scrollLeft =
+            index * (window.innerWidth - 150) + index;
+        });
+      });
+      leftBtn.current?.removeEventListener('click', leftBtnListener);
+      rightBtn.current?.removeEventListener('click', rightBtnListener);
       /*esling-enable*/
     };
   }, []);
@@ -182,7 +190,7 @@ const DaCarousel = () => {
         <Card
           className='card'
           style={{
-            backgroundColor: '#61DAFB99',
+            backgroundColor: '#61DAFF99',
           }}
         >
           <CardImg src={logoReact} />
@@ -214,76 +222,34 @@ const DaCarousel = () => {
         <Card
           className='card'
           style={{
-            backgroundColor: '#44444495',
+            backgroundColor: '#bbbbbb99',
           }}
         >
           <CardImg src={logoThree} />
         </Card>
-
-        <Card
-          className='card'
-          style={{
-            backgroundImage:
-              " url('https://images.pexels.com/photos/572688/pexels-photo-572688.jpeg?cs=srgb&dl=pexels-tyler-lastovich-572688.jpg&fm=jpg')",
-          }}
-        >
-          <CardP>6</CardP>
-        </Card>
-        <Card
-          className='card'
-          style={{
-            backgroundImage:
-              " url('https://burst.shopifycdn.com/photos/golden-autumn-leaves.jpg?width=1200&format=pjpg&exif=1&iptc=1')",
-          }}
-        >
-          <CardP>7</CardP>
-        </Card>
-        <Card
-          className='card'
-          style={{
-            backgroundImage:
-              " url('https://i0.wp.com/digital-photography-school.com/wp-content/uploads/2018/10/bluebells,_oxfordshire.jpg?fit=1500%2C1000&ssl=1')",
-          }}
-        >
-          <CardP>8</CardP>
-        </Card>
-        <Card
-          className='card'
-          style={{
-            backgroundImage:
-              " url('https://images.squarespace-cdn.com/content/v1/5c69df27ca525b3b56a5cce6/1553777016469-K6PBICDGY54KWX764B3Q/Redwoods-Sarah-Marino-1500px.jpg?format=1500w')",
-          }}
-        >
-          <CardP>9</CardP>
-        </Card>
-        <Card
-          className='card'
-          style={{
-            backgroundImage:
-              " url('https://i.guim.co.uk/img/media/18c7596e2cda2b1f2b943c938b977b59028c5f86/0_500_3915_2348/master/3915.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=3c9aaf2e827c29ee2f8114a60acc93aa')",
-          }}
-        >
-          <CardP>10</CardP>
-        </Card>
       </Carousel>
-      <Pagination id='pagination'>
-        <Ball className='ball'></Ball>
-        <Ball className='ball'></Ball>
-        <Ball className='ball'></Ball>
-      </Pagination>
+      {cards.lenght > 4 && (
+        <>
+          <Pagination id='pagination'>
+            <Ball className='ball'></Ball>
+            <Ball className='ball'></Ball>
+            <Ball className='ball'></Ball>
+          </Pagination>
 
-      <Arrow
-        ref={leftBtn}
-        style={{ left: '0' }}
-        id='leftArrow'
-        className='arrow fa-solid fa-caret-left'
-      ></Arrow>
-      <Arrow
-        ref={rightBtn}
-        style={{ right: '0' }}
-        id='rightArrow'
-        className='arrow fa-solid fa-caret-right'
-      ></Arrow>
+          <Arrow
+            ref={leftBtn}
+            style={{ left: '0' }}
+            id='leftArrow'
+            className='arrow fa-solid fa-caret-left'
+          ></Arrow>
+          <Arrow
+            ref={rightBtn}
+            style={{ right: '0' }}
+            id='rightArrow'
+            className='arrow fa-solid fa-caret-right'
+          ></Arrow>
+        </>
+      )}
     </Wrapper>
   );
 };
