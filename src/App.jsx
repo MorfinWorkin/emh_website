@@ -12,8 +12,8 @@ function App() {
     <>
       <Container className='fluid m-0 p-0'>
         <DaAMT bright={0} color={''} />
-        <DaCarousel />
       </Container>
+      <DaCarousel />
       <h1
         style={{
           position: 'absoulte',
