@@ -23,7 +23,7 @@ const Carousel = styled.div`
 
 const Card = styled.div`
    {
-    background-color: #54545400;
+    background-color: #00000000;
     height: ${(height) => height && height};
     width: ${(width) => width && width};
     transition: transform 1s;
@@ -52,7 +52,7 @@ const CardImg = styled.img`
     transform: scale(1);
     src: ${(src) => (src ? src : '')}
     &:hover {
-      background-color: rgba(0, 0, 0, 0.3);
+      
       transform: scale(1.3);
     }
   }
