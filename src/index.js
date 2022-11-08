@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App.jsx';
 import reportWebVitals from './reportWebVitals';
+import DaNav from './components/DaNav';
+import DaFooter from './components/DaFooter';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <DaNav />
     <App />
+    <DaFooter />
   </React.StrictMode>,
 );
 
