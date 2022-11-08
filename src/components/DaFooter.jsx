@@ -50,7 +50,7 @@ const DaFooter = () => {
             justifyContent: 'space-between',
           }}
         >
-          <Col sm={3}>
+          <Col md={3}>
             <DaButton>
               <DaLink target={'blank'} href='https://github.com/MorfinWorkin'>
                 GitHub &nbsp;
@@ -58,7 +58,7 @@ const DaFooter = () => {
               </DaLink>
             </DaButton>
           </Col>
-          <Col sm={6}>
+          <Col md={6}>
             <DaButton>
               <DaLink href='mailto:MorfinWorking@gmail.com'>
                 morfinworking@gmail.com &nbsp;
@@ -69,7 +69,7 @@ const DaFooter = () => {
 
           <br />
 
-          <Col sm={3}>
+          <Col md={3}>
             <DaButton>
               <DaLink
                 target={'blank'}
