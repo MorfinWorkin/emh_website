@@ -48,6 +48,16 @@ const DaFooter = () => {
               </Row>
             </DaButton>
           </Col>
+          <Col xs={5}>
+            <DaButton>
+              <Row>
+                <DaLink href='mailto:MorfinWorking@gmail.com'>
+                  MorfinWorking@gmail.com &nbsp;
+                  <i class='fa-solid fa-envelope'></i>
+                </DaLink>
+              </Row>
+            </DaButton>
+          </Col>
         </Row>
         <br />
         <Row>
