@@ -3,7 +3,7 @@ import React from 'react';
 const DaAMT = ({ children, bright, color }) => {
   //
 
-  window.frameMod = function () {
+  window.frameMod = () => {
     return (
       window.requestAnimationFrame ||
       window.webkitRequestAnimationFrame ||
@@ -18,7 +18,7 @@ const DaAMT = ({ children, bright, color }) => {
 
   console.log('test :>> ', window);
 
-  function init(elemid) {
+  const init = (elemid) => {
     let canvas = document.getElementById(elemid),
       c = canvas.getContext('2d'),
       w = (canvas.width = window.innerWidth),
@@ -26,9 +26,9 @@ const DaAMT = ({ children, bright, color }) => {
     c.fillStyle = color;
     c.fillRect(0, 0, w, h);
     return { c: c, canvas: canvas };
-  }
+  };
 
-  window.onload = function () {
+  window.onload = () => {
     let c = init('myCanvas').c,
       canvas = init('myCanvas').canvas,
       w = (canvas.width = window.innerWidth),
@@ -38,9 +38,9 @@ const DaAMT = ({ children, bright, color }) => {
 
     //initiation
 
-    function dist(p1x, p1y, p2x, p2y) {
+    const dist = (p1x, p1y, p2x, p2y) => {
       return Math.sqrt(Math.pow(p2x - p1x, 2) + Math.pow(p2y - p1y, 2));
-    }
+    };
 
     class segment {
       constructor(parent, l, a, first) {
@@ -157,7 +157,7 @@ const DaAMT = ({ children, bright, color }) => {
       }
     }
 
-    let maxl = 300,
+    let maxl = 500,
       minl = 50,
       n = 30,
       numt = 500,
@@ -210,7 +210,7 @@ const DaAMT = ({ children, bright, color }) => {
         0,
         2 * Math.PI,
       );
-      c.fillStyle = '';
+      c.fillStyle = '#ffffff00';
       c.fill();
 
       for (let i = 0; i < numt; i++) {
@@ -276,19 +276,21 @@ const DaAMT = ({ children, bright, color }) => {
     setInterval(loop, 1000 / 60);
   };
   return (
-    <canvas
-      style={{
-        backgroundColor: 'black',
-        position: 'absolute',
-        left: '0',
-        top: '0',
-        zIndex: '-1',
-        width: '100%',
-      }}
-      id='myCanvas'
-    >
+    <>
+      <canvas
+        style={{
+          backgroundColor: 'black',
+          position: 'absolute',
+          left: '0',
+          top: '0',
+          zIndex: '-1',
+          width: '100%',
+          height: '100vh',
+        }}
+        id='myCanvas'
+      ></canvas>
       {children}
-    </canvas>
+    </>
   );
 };
 
