@@ -1,6 +1,14 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import styled from 'styled-components';
+const DaLink = styled.a`
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+`;
 
 const DaButton = styled.div`
   height: 100%;
@@ -18,10 +26,14 @@ const DaButton = styled.div`
     background: #afafaf10;
     box-shadow: inset 1px 1px 1px #89898900, inset -1px -1px 1px #d6d6d650;
     transition: 0.5s;
+    cursor: pointer;
   }
 `;
 
 const DaFooter = () => {
+  const goTo = () => {
+    window.location.href = 'www.yoursite.com';
+  };
   return (
     <>
       <Container
@@ -32,10 +44,10 @@ const DaFooter = () => {
           <Col xs={2}>
             <DaButton>
               <Row>
-                <span>
+                <DaLink target={'blank'} href='https://github.com/MorfinWorkin'>
                   GitHub &nbsp;
                   <i className='fa-brands fa-github'></i>
-                </span>
+                </DaLink>
               </Row>
             </DaButton>
           </Col>
@@ -44,10 +56,13 @@ const DaFooter = () => {
         <Row>
           <Col xs={2}>
             <DaButton>
-              <span>
+              <DaLink
+                target={'blank'}
+                href={'https://www.linkedin.com/in/emorfinh/'}
+              >
                 LinkedIn &nbsp;
                 <i class='fa-brands fa-linkedin ml-3'></i>
-              </span>
+              </DaLink>
             </DaButton>
           </Col>
         </Row>
