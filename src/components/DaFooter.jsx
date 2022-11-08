@@ -31,9 +31,6 @@ const DaButton = styled.div`
 `;
 
 const DaFooter = () => {
-  const goTo = () => {
-    window.location.href = 'www.yoursite.com';
-  };
   return (
     <>
       <Container
