@@ -60,7 +60,7 @@ const CardImg = styled.img`
 
 const DaCarousel = () => {
   const heightCalc =
-    window.innerWidth < '950' ? 'calc(100vh / 5.8)' : 'calc(100vh - 200px)';
+    window.innerWidth < '850' ? 'calc(100vh / 5.8)' : 'calc(100vh - 200px)';
   return (
     <Container fluid>
       <Carousel>

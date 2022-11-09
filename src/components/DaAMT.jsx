@@ -32,6 +32,7 @@ const DaAMT = ({ children, bright, color }) => {
       w = (canvas.width = window.innerWidth),
       h = (canvas.height = window.innerHeight),
       mouse = { x: false, y: false },
+      /*eslint-disable*/
       last_mouse = {};
 
     //initiation
