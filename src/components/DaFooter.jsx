@@ -42,6 +42,7 @@ const DaFooter = () => {
           padding: '3%',
           alignItems: 'center',
         }}
+        id='footer'
       >
         <Row
           style={{

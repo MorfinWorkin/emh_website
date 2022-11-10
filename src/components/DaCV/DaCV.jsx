@@ -4,66 +4,65 @@ import './DaCV.css';
 import styled from 'styled-components';
 import profileImg from '../../assets/profileImg.webp';
 
-const centerIt = {
-  display: 'flex',
-  margin: 'auto',
-  justifyContent: 'center',
-};
+const ResourcesLinks = styled.a`
+  font-size: 2vw;
+  font-weight: 700;
+  color: inherit;
+  text-decoration: none;
+`;
+
+const DatesCV = styled.p`
+  color: #fecc01;
+  font-size: 1.7vw;
+  font-weight: 700;
+`;
 const ResumeSkills = styled.div`
   background-color: #444444;
   width: 26.5%;
   margin-left: 3%;
-  border: 2px solid #fecc01;
 `;
 const Description = styled.div`
   width: 40;
   padding: 1%;
   color: #fecc01;
-  font-size: 1.9rem;
+  font-size: 1.8vw;
   padding-inline: 10%;
   margin-bottom: 0%;
-  border: 1px solid;
-  border-color: #fecc01;
 `;
 const SkillsHeaders = styled.div`
   width: 100 %;
   padding: 1%;
   color: white;
-  font-size: 2.1rem;
+  font-size: 2.2vw;
   padding-inline: 10%;
   margin-bottom: 0;
-  border: 1px solid;
-  border-color: #fecc01;
+
   letter-spacing: 0.3em;
   font-weight: 600;
 `;
 const Headers = styled.div`
-  width: 100 %;
+  width: 100%;
   padding: 1%;
   color: #000;
-  font-size: 2.3rem;
-  padding-inline: 10%;
+  font-size: 2.2vw;
+  padding-inline: 5vw;
   margin-bottom: 0;
-  border: 1px solid;
-  border-color: #fecc01;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.2vw;
   font-weight: 700;
 `;
 const SkillsContent = styled.div`
   width: 100%;
   padding: 1%;
   color: white;
-  font-size: 1.5rem;
-  padding-inline: 5%;
+  font-size: 1.3vw;
+  padding-inline: 2vw;
   margin-bottom: 0;
-  border: 1px solid;
-  border-color: #fecc01;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.3vw;
   font-weight: 400;
-  line-height: 2.3em;
+  line-height: 5vh;
 `;
 const SkillsLine = styled.div`
-  width: 112.5%;
+  width: calc(25vw - 35px);
   padding: 1%;
   background-color: #fecc01;
   padding-inline: 10%;
@@ -73,24 +72,36 @@ const SkillsLine = styled.div`
 `;
 const HeadersLine = styled.div`
   width: 90%;
-  padding: 0.5%;
+  padding: 0.5vw;
   background-color: #fecc01;
-  padding-inline: 10%;
+  padding-inline: 5vw;
   margin-top: 0;
-  margin-left: 5%;
+  margin-left: 2vw;
   border: 1px solid;
   border-color: #fecc01;
 `;
 const BarContainer = styled.div`
-  width: 100%;
-  height: 40%;
+  width: 80%;
+  padding: 100%
+  justify-content: center;
+ 
 `;
-const NameContainer = styled.div`
-  margin-block: 15%;
+const YellowContainer = styled.div`
+  margin-top: 10vw;
+  margin-inline: 0;
   background-color: #fecc01;
-  width: 90%;
-  height: 33%;
+  width: 40vw;
   padding: 5%;
+  display: flex-box;
+  justify-content: center;
+  align-items: center;
+`;
+
+const ExpAndEd = styled.div`
+  left: 27vw;
+  background-color: #bebebe50;
+  width: 58vw;
+  position: relative;
 `;
 const DaCV = () => {
   return (
@@ -120,11 +131,11 @@ const DaCV = () => {
             <SkillsLine />
           </SkillsHeaders>
           <SkillsContent>
-            <ul style={{ listStyleType: 'none' }}>
+            <ul style={{ listStyleType: 'none', margin: '0', padding: '0' }}>
               <li>
                 <Row>
-                  <Col>React &nbsp;</Col>
-                  <Col style={centerIt}>
+                  <Col>
+                    React
                     <BarContainer>
                       <ProgressBar now={80} />
                     </BarContainer>
@@ -133,8 +144,8 @@ const DaCV = () => {
               </li>
               <li>
                 <Row>
-                  <Col>JavaScript </Col>
-                  <Col style={centerIt}>
+                  <Col>
+                    JavaScript
                     <BarContainer>
                       <ProgressBar now={75} />
                     </BarContainer>
@@ -143,8 +154,8 @@ const DaCV = () => {
               </li>
               <li>
                 <Row>
-                  <Col>CSS &nbsp;</Col>
-                  <Col style={centerIt}>
+                  <Col>
+                    CSS
                     <BarContainer>
                       <ProgressBar now={80} />
                     </BarContainer>
@@ -153,8 +164,8 @@ const DaCV = () => {
               </li>
               <li>
                 <Row>
-                  <Col>HTML &nbsp;</Col>
-                  <Col style={centerIt}>
+                  <Col>
+                    HTML
                     <BarContainer>
                       <ProgressBar now={80} />
                     </BarContainer>
@@ -163,8 +174,8 @@ const DaCV = () => {
               </li>
               <li>
                 <Row>
-                  <Col>Threejs &nbsp;</Col>
-                  <Col style={centerIt}>
+                  <Col>
+                    Threejs
                     <BarContainer>
                       <ProgressBar now={70} />
                     </BarContainer>
@@ -173,8 +184,8 @@ const DaCV = () => {
               </li>
               <li>
                 <Row>
-                  <Col>UnitTesting </Col>
-                  <Col style={centerIt}>
+                  <Col>
+                    UnitTesting
                     <BarContainer>
                       <ProgressBar now={60} />
                     </BarContainer>
@@ -183,8 +194,8 @@ const DaCV = () => {
               </li>
               <li>
                 <Row>
-                  <Col>Nodejs &nbsp;</Col>
-                  <Col style={centerIt}>
+                  <Col>
+                    Nodejs
                     <BarContainer>
                       <ProgressBar now={60} />
                     </BarContainer>
@@ -198,11 +209,11 @@ const DaCV = () => {
             <SkillsLine />
           </SkillsHeaders>
           <SkillsContent>
-            <ul style={{ listStyleType: 'none' }}>
+            <ul style={{ listStyleType: 'none', margin: '0', padding: '0' }}>
               <li>
                 <Row>
-                  <Col>English &nbsp;</Col>
-                  <Col style={centerIt}>
+                  <Col>
+                    English
                     <BarContainer>
                       <ProgressBar now={85} />
                     </BarContainer>
@@ -211,8 +222,8 @@ const DaCV = () => {
               </li>
               <li>
                 <Row>
-                  <Col>Spanish &nbsp;</Col>
-                  <Col style={centerIt}>
+                  <Col>
+                    Spanish
                     <BarContainer>
                       <ProgressBar now={100} />
                     </BarContainer>
@@ -222,43 +233,116 @@ const DaCV = () => {
             </ul>
           </SkillsContent>
         </ResumeSkills>
-        <Container>
-          <div
-            style={{
-              top: 0,
-              marginLeft: '11.5%',
-              backgroundColor: '#ff000050',
-              height: '100vh',
-              width: '53.7%',
-              position: 'absolute',
-            }}
-          >
-            <NameContainer>
-              <h2
-                style={{
-                  fontWeight: '900',
-                  fontSize: '3.5rem',
-                  letterSpacing: '0.1em',
-                }}
+
+        <ExpAndEd
+          style={{
+            top: '100vh',
+            left: '27vw',
+            backgroundColor: '#bebebe00',
+            width: '58vw',
+            position: 'absolute',
+          }}
+          id='exp-edu'
+        >
+          <YellowContainer id='yellow-container'>
+            <h2
+              style={{
+                fontWeight: '900',
+                fontSize: '2.5vw',
+                letterSpacing: '0.3vw',
+              }}
+            >
+              MORFIN HERNANDEZ
+            </h2>
+            <h3
+              style={{
+                fontWeight: '400',
+                fontSize: '2.5vw',
+                letterSpacing: '0.3vw',
+              }}
+            >
+              EDUARDO
+            </h3>
+          </YellowContainer>
+          <div id='education' style={{ padding: '2vw', marginBottom: '4vw' }}>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <Headers>EDUCATION</Headers>
+            <HeadersLine />
+            <div style={{ marginTop: '3vh', paddingInline: '5vw' }}>
+              <DatesCV>FEB 2021 - FEB 2022</DatesCV>
+              <ResourcesLinks
+                href='https://www.freecodecamp.org/'
+                target='blank'
               >
-                MORFIN HERNANDEZ
-              </h2>
-              <h3
-                style={{
-                  fontWeight: '400',
-                  fontSize: '3.5rem',
-                  letterSpacing: '0.1em',
-                }}
-              >
-                EDUARDO
-              </h3>
-            </NameContainer>
-            <div style={{ padding: '2%' }}>
-              <Headers>EDUCATION</Headers>
-              <HeadersLine />
+                freeCodeCamp.org
+              </ResourcesLinks>
+              <p style={{ fontSize: '1.8vw' }}>
+                JavaScript Algorithms and Data Structures.
+                <br />
+                Front End Development libraries.
+              </p>
             </div>
           </div>
-        </Container>
+          <br />
+          <br />
+          <br />
+          <br />
+          <div id='experience' style={{ padding: '2vw', marginBottom: '4vw' }}>
+            <Headers>EXPERIENCES</Headers>
+            <HeadersLine />
+            <div style={{ marginTop: '3vh', paddingInline: '5vw' }}>
+              <DatesCV>FEB 2022 - On Going</DatesCV>
+              <ResourcesLinks href='#footer' target='self'>
+                Autonomous
+              </ResourcesLinks>
+              <p style={{ fontSize: '1.7vw' }}>
+                I've been working as front-end developer using React,
+                JavaScript, CSS, HTML and Three js mostly.
+                <br />
+                Bellow you can find some links to my work.
+              </p>
+              <ul>
+                <li>
+                  <ResourcesLinks
+                    href='#footer'
+                    target='blank'
+                    style={{ fontSize: '1.5vw' }}
+                    id='nuren'
+                  >
+                    Nuren WebApp
+                  </ResourcesLinks>
+                </li>
+                <li>
+                  <ResourcesLinks
+                    href='#footer'
+                    target='blank'
+                    style={{ fontSize: '1.5vw' }}
+                    id='3d-isolated'
+                  >
+                    3D isolated enviorement
+                  </ResourcesLinks>
+                </li>
+                <li>
+                  <ResourcesLinks
+                    href='#footer'
+                    target='blank'
+                    style={{ fontSize: '1.5vw' }}
+                    id='enlaceambiental'
+                  >
+                    enlaceambiental.mx
+                  </ResourcesLinks>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </ExpAndEd>
       </Container>
     </>
   );

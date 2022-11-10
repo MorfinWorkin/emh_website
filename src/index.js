@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './AppCopy.jsx';
+import App from './App.jsx';
 import reportWebVitals from './reportWebVitals';
 import DaNav from './components/DaNav';
 import DaFooter from './components/DaFooter';
@@ -9,9 +9,9 @@ import DaFooter from './components/DaFooter';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <DaNav /> */}
+    <DaNav />
     <App />
-    {/* <DaFooter /> */}
+    <DaFooter />
   </React.StrictMode>,
 );
 

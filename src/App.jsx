@@ -5,6 +5,7 @@ import DaAMT from './components/DaAMT';
 import DaCarousel from './components/DaCarousel/DaCarousel';
 import { Container, Row } from 'react-bootstrap';
 import myCV from './assets/myCV.png';
+import DaCV from './components/DaCV/DaCV';
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
       </h1>
       <Container>
         <Row>
-          <img alt='Eduardo Morfin CV' src={myCV} />
+          <DaCV id='curriculumCode' />
         </Row>
       </Container>
     </>
