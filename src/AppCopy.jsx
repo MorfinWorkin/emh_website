@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import myCV from './assets/myCV.png';
-import DaCV from './components/DaCV';
+import DaCV from './components/DaCV/DaCV';
 import { Container } from 'react-bootstrap';
 
 function App() {
