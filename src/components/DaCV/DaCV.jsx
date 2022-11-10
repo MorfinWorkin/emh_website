@@ -17,7 +17,7 @@ const DatesCV = styled.p`
   font-weight: 700;
 `;
 const ResumeSkills = styled.div`
-  background-color: #444444;
+  background-color: #1f1f1f;
   width: 100%;
   margin-left: 3%;
 `;
@@ -109,7 +109,6 @@ const DaCV = () => {
         style={{
           backgroundColor: 'white',
           zIndex: '1',
-          opacity: 0.8,
         }}
       >
         <Row>
