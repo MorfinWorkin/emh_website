@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import profileImg from '../../assets/profileImg.webp';
 
 const ResourcesLinks = styled.a`
-  font-size: 2vw;
+  font-size: 1.5vw;
   font-weight: 700;
   color: inherit;
   text-decoration: none;
@@ -13,7 +13,7 @@ const ResourcesLinks = styled.a`
 
 const DatesCV = styled.p`
   color: #fecc01;
-  font-size: 1.7vw;
+  font-size: 1.3vw;
   font-weight: 700;
 `;
 const ResumeSkills = styled.div`
@@ -25,7 +25,7 @@ const Description = styled.div`
   width: 40;
   padding: 1%;
   color: #fecc01;
-  font-size: 1.8vw;
+  font-size: 1.5vw;
   padding-inline: 10%;
   margin-bottom: 0%;
 `;
@@ -33,7 +33,7 @@ const SkillsHeaders = styled.div`
   width: 100 %;
   padding: 1%;
   color: white;
-  font-size: 2vw;
+  font-size: 1.5vw;
   padding-inline: 10%;
   margin-bottom: 0;
 
@@ -44,7 +44,7 @@ const Headers = styled.div`
   width: 100%;
   padding: 1%;
   color: #000;
-  font-size: 2.2vw;
+  font-size: 1.7vw;
   padding-inline: 5vw;
   margin-bottom: 0;
   letter-spacing: 0.2vw;
@@ -54,7 +54,7 @@ const SkillsContent = styled.div`
   width: 100%;
   padding: 1%;
   color: white;
-  font-size: 1.3vw;
+  font-size: 1.1vw;
   padding-inline: 2vw;
   margin-bottom: 0;
   letter-spacing: 0.3vw;
@@ -81,7 +81,7 @@ const HeadersLine = styled.div`
   border-color: #fecc01;
 `;
 const BarContainer = styled.div`
-  width: 80%;
+  width: 50%;
   padding: 100%
   justify-content: center;
  
@@ -211,7 +211,11 @@ const DaCV = () => {
               </SkillsHeaders>
               <SkillsContent>
                 <ul
-                  style={{ listStyleType: 'none', margin: '0', padding: '0' }}
+                  style={{
+                    listStyleType: 'none',
+                    marginBottom: '10vh',
+                    padding: '0',
+                  }}
                 >
                   <li>
                     <Row>
@@ -267,9 +271,6 @@ const DaCV = () => {
                 <br />
                 <br />
                 <br />
-                <br />
-                <br />
-                <br />
                 <Headers>EDUCATION</Headers>
                 <HeadersLine />
                 <div style={{ marginTop: '3vh', paddingInline: '5vw' }}>
@@ -280,17 +281,13 @@ const DaCV = () => {
                   >
                     freeCodeCamp.org
                   </ResourcesLinks>
-                  <p style={{ fontSize: '1.8vw' }}>
+                  <p style={{ fontSize: '1.5vw' }}>
                     JavaScript Algorithms and Data Structures.
                     <br />
                     Front End Development libraries.
                   </p>
                 </div>
               </div>
-              <br />
-              <br />
-              <br />
-              <br />
               <div
                 id='experience'
                 style={{ padding: '2vw', marginBottom: '4vw' }}
@@ -302,7 +299,7 @@ const DaCV = () => {
                   <ResourcesLinks href='#footer' target='self'>
                     Autonomous
                   </ResourcesLinks>
-                  <p style={{ fontSize: '1.7vw' }}>
+                  <p style={{ fontSize: '1.5vw' }}>
                     I've been working as front-end developer using React,
                     JavaScript, CSS, HTML and Three js mostly.
                     <br />
