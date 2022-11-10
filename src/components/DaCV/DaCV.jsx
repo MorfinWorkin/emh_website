@@ -18,7 +18,7 @@ const DatesCV = styled.p`
 `;
 const ResumeSkills = styled.div`
   background-color: #444444;
-  width: 26.5%;
+  width: 100%;
   margin-left: 3%;
 `;
 const Description = styled.div`
@@ -33,7 +33,7 @@ const SkillsHeaders = styled.div`
   width: 100 %;
   padding: 1%;
   color: white;
-  font-size: 2.2vw;
+  font-size: 2vw;
   padding-inline: 10%;
   margin-bottom: 0;
 
@@ -62,7 +62,7 @@ const SkillsContent = styled.div`
   line-height: 5vh;
 `;
 const SkillsLine = styled.div`
-  width: calc(25vw - 35px);
+  width: 100%;
   padding: 1%;
   background-color: #fecc01;
   padding-inline: 10%;
@@ -98,10 +98,8 @@ const YellowContainer = styled.div`
 `;
 
 const ExpAndEd = styled.div`
-  left: 27vw;
-  background-color: #bebebe50;
   width: 58vw;
-  position: relative;
+  position: absolute;
 `;
 const DaCV = () => {
   return (
@@ -114,235 +112,240 @@ const DaCV = () => {
           opacity: 0.8,
         }}
       >
-        <ResumeSkills>
-          <img
-            alt='This is Eduardo Morfin , gray scaled.'
-            src={profileImg}
-            style={{ width: '100%', padding: '1%' }}
-          />
-          <Description>
-            Recently started as a Software Developer, Im a code enthusiast and
-            consider myself a great co-worker, a proactive and resolutive
-            person. Currently im in my first year of computer systems
-            engineering.
-          </Description>
-          <SkillsHeaders>
-            SKILLS
-            <SkillsLine />
-          </SkillsHeaders>
-          <SkillsContent>
-            <ul style={{ listStyleType: 'none', margin: '0', padding: '0' }}>
-              <li>
-                <Row>
-                  <Col>
-                    React
-                    <BarContainer>
-                      <ProgressBar now={80} />
-                    </BarContainer>
-                  </Col>
-                </Row>
-              </li>
-              <li>
-                <Row>
-                  <Col>
-                    JavaScript
-                    <BarContainer>
-                      <ProgressBar now={75} />
-                    </BarContainer>
-                  </Col>
-                </Row>
-              </li>
-              <li>
-                <Row>
-                  <Col>
-                    CSS
-                    <BarContainer>
-                      <ProgressBar now={80} />
-                    </BarContainer>
-                  </Col>
-                </Row>
-              </li>
-              <li>
-                <Row>
-                  <Col>
-                    HTML
-                    <BarContainer>
-                      <ProgressBar now={80} />
-                    </BarContainer>
-                  </Col>
-                </Row>
-              </li>
-              <li>
-                <Row>
-                  <Col>
-                    Threejs
-                    <BarContainer>
-                      <ProgressBar now={70} />
-                    </BarContainer>
-                  </Col>
-                </Row>
-              </li>
-              <li>
-                <Row>
-                  <Col>
-                    UnitTesting
-                    <BarContainer>
-                      <ProgressBar now={60} />
-                    </BarContainer>
-                  </Col>
-                </Row>
-              </li>
-              <li>
-                <Row>
-                  <Col>
-                    Nodejs
-                    <BarContainer>
-                      <ProgressBar now={60} />
-                    </BarContainer>
-                  </Col>
-                </Row>
-              </li>
-            </ul>
-          </SkillsContent>
-          <SkillsHeaders>
-            LANGUAGES
-            <SkillsLine />
-          </SkillsHeaders>
-          <SkillsContent>
-            <ul style={{ listStyleType: 'none', margin: '0', padding: '0' }}>
-              <li>
-                <Row>
-                  <Col>
-                    English
-                    <BarContainer>
-                      <ProgressBar now={85} />
-                    </BarContainer>
-                  </Col>
-                </Row>
-              </li>
-              <li>
-                <Row>
-                  <Col>
-                    Spanish
-                    <BarContainer>
-                      <ProgressBar now={100} />
-                    </BarContainer>
-                  </Col>
-                </Row>
-              </li>
-            </ul>
-          </SkillsContent>
-        </ResumeSkills>
-
-        <ExpAndEd
-          style={{
-            top: '100vh',
-            left: '27vw',
-            backgroundColor: '#bebebe00',
-            width: '58vw',
-            position: 'absolute',
-          }}
-          id='exp-edu'
-        >
-          <YellowContainer id='yellow-container'>
-            <h2
-              style={{
-                fontWeight: '900',
-                fontSize: '2.5vw',
-                letterSpacing: '0.3vw',
-              }}
-            >
-              MORFIN HERNANDEZ
-            </h2>
-            <h3
-              style={{
-                fontWeight: '400',
-                fontSize: '2.5vw',
-                letterSpacing: '0.3vw',
-              }}
-            >
-              EDUARDO
-            </h3>
-          </YellowContainer>
-          <div id='education' style={{ padding: '2vw', marginBottom: '4vw' }}>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <Headers>EDUCATION</Headers>
-            <HeadersLine />
-            <div style={{ marginTop: '3vh', paddingInline: '5vw' }}>
-              <DatesCV>FEB 2021 - FEB 2022</DatesCV>
-              <ResourcesLinks
-                href='https://www.freecodecamp.org/'
-                target='blank'
+        <Row>
+          <Col xs={4}>
+            <ResumeSkills>
+              <img
+                alt='This is Eduardo Morfin , gray scaled.'
+                src={profileImg}
+                style={{ width: '100%', padding: '1%' }}
+              />
+              <Description>
+                Recently started as a Software Developer, Im a code enthusiast
+                and consider myself a great co-worker, a proactive and
+                resolutive person. Currently im in my first year of computer
+                systems engineering.
+              </Description>
+              <SkillsHeaders>
+                SKILLS
+                <SkillsLine />
+              </SkillsHeaders>
+              <SkillsContent>
+                <ul
+                  style={{ listStyleType: 'none', margin: '0', padding: '0' }}
+                >
+                  <li>
+                    <Row>
+                      <Col>
+                        React
+                        <BarContainer>
+                          <ProgressBar now={80} />
+                        </BarContainer>
+                      </Col>
+                    </Row>
+                  </li>
+                  <li>
+                    <Row>
+                      <Col>
+                        JavaScript
+                        <BarContainer>
+                          <ProgressBar now={75} />
+                        </BarContainer>
+                      </Col>
+                    </Row>
+                  </li>
+                  <li>
+                    <Row>
+                      <Col>
+                        CSS
+                        <BarContainer>
+                          <ProgressBar now={80} />
+                        </BarContainer>
+                      </Col>
+                    </Row>
+                  </li>
+                  <li>
+                    <Row>
+                      <Col>
+                        HTML
+                        <BarContainer>
+                          <ProgressBar now={80} />
+                        </BarContainer>
+                      </Col>
+                    </Row>
+                  </li>
+                  <li>
+                    <Row>
+                      <Col>
+                        Threejs
+                        <BarContainer>
+                          <ProgressBar now={70} />
+                        </BarContainer>
+                      </Col>
+                    </Row>
+                  </li>
+                  <li>
+                    <Row>
+                      <Col>
+                        UnitTesting
+                        <BarContainer>
+                          <ProgressBar now={60} />
+                        </BarContainer>
+                      </Col>
+                    </Row>
+                  </li>
+                  <li>
+                    <Row>
+                      <Col>
+                        Nodejs
+                        <BarContainer>
+                          <ProgressBar now={60} />
+                        </BarContainer>
+                      </Col>
+                    </Row>
+                  </li>
+                </ul>
+              </SkillsContent>
+              <SkillsHeaders>
+                LANGUAGES
+                <SkillsLine />
+              </SkillsHeaders>
+              <SkillsContent>
+                <ul
+                  style={{ listStyleType: 'none', margin: '0', padding: '0' }}
+                >
+                  <li>
+                    <Row>
+                      <Col>
+                        English
+                        <BarContainer>
+                          <ProgressBar now={85} />
+                        </BarContainer>
+                      </Col>
+                    </Row>
+                  </li>
+                  <li>
+                    <Row>
+                      <Col>
+                        Spanish
+                        <BarContainer>
+                          <ProgressBar now={100} />
+                        </BarContainer>
+                      </Col>
+                    </Row>
+                  </li>
+                </ul>
+              </SkillsContent>
+            </ResumeSkills>
+          </Col>
+          <Col xs={8} style={{ marginLeft: '-3vw' }}>
+            <ExpAndEd id='exp-edu'>
+              <YellowContainer id='yellow-container'>
+                <h2
+                  style={{
+                    fontWeight: '900',
+                    fontSize: '2.5vw',
+                    letterSpacing: '0.3vw',
+                  }}
+                >
+                  MORFIN HERNANDEZ
+                </h2>
+                <h3
+                  style={{
+                    fontWeight: '400',
+                    fontSize: '2.5vw',
+                    letterSpacing: '0.3vw',
+                  }}
+                >
+                  EDUARDO
+                </h3>
+              </YellowContainer>
+              <div
+                id='education'
+                style={{ padding: '2vw', marginBottom: '4vw' }}
               >
-                freeCodeCamp.org
-              </ResourcesLinks>
-              <p style={{ fontSize: '1.8vw' }}>
-                JavaScript Algorithms and Data Structures.
                 <br />
-                Front End Development libraries.
-              </p>
-            </div>
-          </div>
-          <br />
-          <br />
-          <br />
-          <br />
-          <div id='experience' style={{ padding: '2vw', marginBottom: '4vw' }}>
-            <Headers>EXPERIENCES</Headers>
-            <HeadersLine />
-            <div style={{ marginTop: '3vh', paddingInline: '5vw' }}>
-              <DatesCV>FEB 2022 - On Going</DatesCV>
-              <ResourcesLinks href='#footer' target='self'>
-                Autonomous
-              </ResourcesLinks>
-              <p style={{ fontSize: '1.7vw' }}>
-                I've been working as front-end developer using React,
-                JavaScript, CSS, HTML and Three js mostly.
                 <br />
-                Bellow you can find some links to my work.
-              </p>
-              <ul>
-                <li>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <Headers>EDUCATION</Headers>
+                <HeadersLine />
+                <div style={{ marginTop: '3vh', paddingInline: '5vw' }}>
+                  <DatesCV>FEB 2021 - FEB 2022</DatesCV>
                   <ResourcesLinks
-                    href='#footer'
+                    href='https://www.freecodecamp.org/'
                     target='blank'
-                    style={{ fontSize: '1.5vw' }}
-                    id='nuren'
                   >
-                    Nuren WebApp
+                    freeCodeCamp.org
                   </ResourcesLinks>
-                </li>
-                <li>
-                  <ResourcesLinks
-                    href='#footer'
-                    target='blank'
-                    style={{ fontSize: '1.5vw' }}
-                    id='3d-isolated'
-                  >
-                    3D isolated enviorement
+                  <p style={{ fontSize: '1.8vw' }}>
+                    JavaScript Algorithms and Data Structures.
+                    <br />
+                    Front End Development libraries.
+                  </p>
+                </div>
+              </div>
+              <br />
+              <br />
+              <br />
+              <br />
+              <div
+                id='experience'
+                style={{ padding: '2vw', marginBottom: '4vw' }}
+              >
+                <Headers>EXPERIENCES</Headers>
+                <HeadersLine />
+                <div style={{ marginTop: '3vh', paddingInline: '5vw' }}>
+                  <DatesCV>FEB 2022 - On Going</DatesCV>
+                  <ResourcesLinks href='#footer' target='self'>
+                    Autonomous
                   </ResourcesLinks>
-                </li>
-                <li>
-                  <ResourcesLinks
-                    href='#footer'
-                    target='blank'
-                    style={{ fontSize: '1.5vw' }}
-                    id='enlaceambiental'
-                  >
-                    enlaceambiental.mx
-                  </ResourcesLinks>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </ExpAndEd>
+                  <p style={{ fontSize: '1.7vw' }}>
+                    I've been working as front-end developer using React,
+                    JavaScript, CSS, HTML and Three js mostly.
+                    <br />
+                    Bellow you can find some links to my work.
+                  </p>
+                  <ul>
+                    <li>
+                      <ResourcesLinks
+                        href='#footer'
+                        target='blank'
+                        style={{ fontSize: '1.5vw' }}
+                        id='nuren'
+                      >
+                        Nuren WebApp
+                      </ResourcesLinks>
+                    </li>
+                    <li>
+                      <ResourcesLinks
+                        href='#footer'
+                        target='blank'
+                        style={{ fontSize: '1.5vw' }}
+                        id='3d-isolated'
+                      >
+                        3D isolated enviorement
+                      </ResourcesLinks>
+                    </li>
+                    <li>
+                      <ResourcesLinks
+                        href='#footer'
+                        target='blank'
+                        style={{ fontSize: '1.5vw' }}
+                        id='enlaceambiental'
+                      >
+                        enlaceambiental.mx
+                      </ResourcesLinks>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </ExpAndEd>
+          </Col>
+        </Row>
       </Container>
     </>
   );
