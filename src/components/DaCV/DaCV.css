@@ -1,0 +1,7 @@
+.progress-bar{
+  background-color: #FECC01 !important;
+  color: #FECC01 !important
+}
+:root {
+  --yellow: #FECC01;
+}
