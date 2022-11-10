@@ -312,7 +312,7 @@ const DaCV = () => {
                   <ul>
                     <li>
                       <ResourcesLinks
-                        href='#footer'
+                        href='https://nurem-f9b0e.web.app/login'
                         target='blank'
                         style={{ fontSize: '1.5vw' }}
                         id='nuren'
@@ -322,7 +322,7 @@ const DaCV = () => {
                     </li>
                     <li>
                       <ResourcesLinks
-                        href='#footer'
+                        href='https://mi-refa-test.web.app/'
                         target='blank'
                         style={{ fontSize: '1.5vw' }}
                         id='3d-isolated'
@@ -332,7 +332,7 @@ const DaCV = () => {
                     </li>
                     <li>
                       <ResourcesLinks
-                        href='#footer'
+                        href='https://enlaceambiental.mx/'
                         target='blank'
                         style={{ fontSize: '1.5vw' }}
                         id='enlaceambiental'
