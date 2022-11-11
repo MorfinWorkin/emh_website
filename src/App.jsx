@@ -29,7 +29,7 @@ function App() {
           <em> &nbsp; - John Johnson</em>
         </strong>
       </h1>
-      <Container>
+      <Container style={{ marginInline: '3vmax' }}>
         <Row>
           <DaCV id='curriculumCode' />
         </Row>

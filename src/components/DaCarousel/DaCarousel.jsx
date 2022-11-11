@@ -8,42 +8,38 @@ import logoThree from '../../assets/ThreeJSlogo.svg';
 import { Col, Container, Row } from 'react-bootstrap';
 
 const Carousel = styled.div`
-   {
-    height: 100%;
-    width: 100%;
-    padding: 3%;
-    top: 0;
-    overflow: hidden;
-    scroll-behavior: smooth;
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-  }
+  height: 100%;
+  width: 100%;
+  padding: 3%;
+  top: 0;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
 `;
 
 const Card = styled.div`
-   {
-    background-color: #00000000;
-    height: ${(height) => height && height};
-    width: ${(width) => width && width};
-    transition: transform 1s;
-    background-size: auto 110%;
-    background-position: center;
-    transition: all 0.3s;
-    &:hover {
-      background-size: auto 100%;
-    }
-    &::first-child {
-      margin-left: 0;
-    }
-    &::last-child {
-      margin-right: 0;
-    }
+  background-color: #00000000;
+  height: ${(height) => height && height};
+  width: ${(width) => width && width};
+  transition: transform 1s;
+  background-size: auto 110%;
+  background-position: center;
+  transition: all 0.3s;
+  &:hover {
+    background-size: auto 100%;
+  }
+  &::first-child {
+    margin-left: 0;
+  }
+  &::last-child {
+    margin-right: 0;
   }
 `;
 
 const CardImg = styled.img`
-   {
+   
     height: 100%;
     width: calc(100vw / 50px)
     color: white;
@@ -51,11 +47,10 @@ const CardImg = styled.img`
     transition: all 0.3s;
     transform: scale(1);
     src: ${(src) => (src ? src : '')}
-    &:hover {
-      
+    &:hover {  
       transform: scale(1.3);
     }
-  }
+  
 `;
 
 const DaCarousel = () => {
