@@ -38,7 +38,7 @@ const DaFooter = () => {
         fluid
         style={{
           backgroundColor: '#1f1f1f',
-          height: '20vh',
+          height: '20%',
           padding: '3%',
           alignItems: 'center',
         }}
