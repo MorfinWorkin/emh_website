@@ -266,7 +266,7 @@ const DaAMT = ({ children, bright, color }) => {
     const onResize = () => {
       w = canvas.width = window.innerWidth;
       h = canvas.height = window.innerHeight;
-      console.log('test :>> ', window);
+      // console.log('test :>> ', window);
       loop();
     };
 
