@@ -20,7 +20,9 @@ function App() {
           display: 'flex',
           justifyContent: 'center',
           padding: '5vh',
-          fontSize: '1.5em',
+          fontSize: '4.4vmin',
+          marginBlock: '10%',
+          borderBottom: '.8vmax solid #1f1f1f',
         }}
       >
         “First, solve the problem. Then, write the code.”
