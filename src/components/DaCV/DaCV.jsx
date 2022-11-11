@@ -90,7 +90,7 @@ const YellowContainer = styled.div`
   margin-top: 10vw;
   margin-left: -5vmin;
   background-color: #fecc01;
-  width: 60vw;
+  width: 100%;
   padding: 5%;
   display: flex-box;
   justify-content: center;
