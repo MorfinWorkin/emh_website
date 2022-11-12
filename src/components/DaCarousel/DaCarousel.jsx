@@ -6,6 +6,7 @@ import logoReact from '../../assets/ReactBadge.svg';
 import logoCSS from '../../assets/CSSlogo.svg';
 import logoThree from '../../assets/ThreeJSlogo.svg';
 import { Col, Container, Row } from 'react-bootstrap';
+/*eslint-disable*/
 
 const Carousel = styled.div`
   height: 100%;
@@ -21,8 +22,9 @@ const Carousel = styled.div`
 
 const Card = styled.div`
   background-color: #00000000;
-  height: ${(height) => height && height};
-  width: ${(width) => width && width};
+  height: calc(100% / 6);
+  width: 80;
+  display: flex;
   transition: transform 1s;
   background-size: auto 110%;
   background-position: center;
@@ -39,7 +41,7 @@ const Card = styled.div`
 `;
 
 const CardImg = styled.img`
-   
+
     height: 100%;
     width: calc(100vw / 50px)
     color: white;
@@ -47,18 +49,28 @@ const CardImg = styled.img`
     transition: all 0.3s;
     transform: scale(1);
     src: ${(src) => (src ? src : '')}
-    &:hover {  
+    &:hover {
       transform: scale(1.3);
     }
-  
+
 `;
 
 const DaCarousel = () => {
+  console.log(window.screen.orientation);
+  /*values
+  horizontal : 'landscape-primary'
+  vertical : 'portrait-primary'*/
+  const calcOrientation =
+    window.screen.orientation === 'portrait-primary'
+      ? 'to do when vertical'
+      : window.screen.orientation === 'portrait-primary'
+      ? 'to do when horizontal'
+      : null;
   const heightCalc =
     window.innerWidth < '850' ? 'calc(100vh / 5.8)' : 'calc(100vh - 200px)';
   return (
-    <Container fluid>
-      <Carousel>
+    <>
+      <Container fluid id='carousel'>
         <Row
           style={{
             display: 'flex',
@@ -121,8 +133,8 @@ const DaCarousel = () => {
             </Card>
           </Col>
         </Row>
-      </Carousel>
-    </Container>
+      </Container>
+    </>
   );
 };
 

@@ -4,8 +4,8 @@ import './App.css';
 import DaAMT from './components/DaAMT';
 import DaCarousel from './components/DaCarousel/DaCarousel';
 import { Container, Row } from 'react-bootstrap';
-import myCV from './assets/myCV.png';
 import DaCV from './components/DaCV/DaCV';
+import DaCards from './components/DaCards/DaCards';
 
 function App() {
   return (
@@ -13,7 +13,8 @@ function App() {
       <Container className='fluid m-0 p-0'>
         <DaAMT bright={0} color={''} />
       </Container>
-      <DaCarousel />
+      {/* <DaCarousel /> */}
+      <DaCards />
       <h1
         style={{
           position: 'absoulte',
@@ -21,7 +22,7 @@ function App() {
           justifyContent: 'center',
           padding: '5vh',
           fontSize: '4.4vmin',
-          marginBlock: '10%',
+          marginBlock: '5%',
           borderBottom: '.8vmax solid #1f1f1f',
         }}
       >
