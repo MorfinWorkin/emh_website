@@ -13,29 +13,29 @@ function App() {
       <Container className='fluid m-0 p-0'>
         <DaAMT bright={0} color={''} />
       </Container>
-      {/* <DaCarousel /> */}
       <DaCards />
-      <h1
-        style={{
-          position: 'absoulte',
-          display: 'flex',
-          justifyContent: 'center',
-          padding: '5vh',
-          fontSize: '4.4vmin',
-          marginBlock: '5%',
-          borderBottom: '.8vmax solid #1f1f1f',
-        }}
-      >
-        “First, solve the problem. Then, write the code.”
-        <br />
-        <strong>
-          <em> &nbsp; - John Johnson</em>
-        </strong>
-      </h1>
-      <Container style={{ marginInline: '3vmax' }}>
-        <Row>
-          <DaCV id='curriculumCode' />
-        </Row>
+      <Container fluid style={{ zIndex: '1', backgroundColor: '#fff' }}>
+        <h1
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            padding: '5vh',
+            fontSize: '4.4vmin',
+            marginBlock: '5%',
+            borderBottom: '.8vmax solid #1f1f1f',
+          }}
+        >
+          “First, solve the problem. Then, write the code.”
+          <br />
+          <strong>
+            <em> &nbsp; - John Johnson</em>
+          </strong>
+        </h1>
+        <Container style={{ marginInline: '3vmax' }}>
+          <Row>
+            <DaCV id='curriculumCode' />
+          </Row>
+        </Container>
       </Container>
     </>
   );
