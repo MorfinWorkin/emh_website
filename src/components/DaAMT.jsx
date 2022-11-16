@@ -283,7 +283,7 @@ const DaAMT = ({ children, bright, color }) => {
           position: 'absolute',
           left: '0',
           top: '0',
-          zIndex: '-1',
+          zIndex: '-10',
           width: '100%',
           height: '100vh',
         }}
