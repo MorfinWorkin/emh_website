@@ -30,6 +30,11 @@ const CardImg = styled.img`
   transition: transform 0.3s;
   transform: scale(0.8);
   border-radius: 25px;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+  user-select: none;
   &:active {
     transform: scale(1);
     position: absolute;
