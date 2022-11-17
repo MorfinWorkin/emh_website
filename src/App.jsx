@@ -2,10 +2,11 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import DaAMT from './components/DaAMT';
-import DaCarousel from './components/DaCarousel/DaCarousel';
+// import DaCarousel from './components/DaCarousel/DaCarousel';
 import { Container, Row } from 'react-bootstrap';
 import DaCV from './components/DaCV/DaCV';
-import DaCards from './components/DaCards/DaCards';
+// import DaCards from './components/DaCards/DaCards';
+import ExpandingCards from './components/ExpandingCards/ExpandingCards';
 
 function App() {
   return (
@@ -13,8 +14,9 @@ function App() {
       <Container className='fluid m-0 p-0'>
         <DaAMT bright={0} color={''} />
       </Container>
-      <DaCards />
-      <Container fluid style={{ zIndex: '1', backgroundColor: '#fff' }}>
+      {/* <DaCards /> */}
+      <ExpandingCards />
+      <Container fluid style={{ backgroundColor: '#fff' }}>
         <h1
           style={{
             display: 'flex',
