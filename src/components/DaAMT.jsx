@@ -235,26 +235,26 @@ const DaAMT = ({ children, bright, color }) => {
     //   false,
     // );
 
-    canvas.addEventListener('mouseleave', function (e) {
-      mouse.x = false;
-      mouse.y = false;
-    });
+    // canvas.addEventListener('mouseleave', function (e) {
+    //   mouse.x = false;
+    //   mouse.y = false;
+    // });
 
-    canvas.addEventListener(
-      'mousedown',
-      function (e) {
-        clicked = true;
-      },
-      false,
-    );
+    // canvas.addEventListener(
+    //   'mousedown',
+    //   function (e) {
+    //     clicked = true;
+    //   },
+    //   false,
+    // );
 
-    canvas.addEventListener(
-      'mouseup',
-      function (e) {
-        clicked = false;
-      },
-      false,
-    );
+    // canvas.addEventListener(
+    //   'mouseup',
+    //   function (e) {
+    //     clicked = false;
+    //   },
+    //   false,
+    // );
 
     function loop() {
       window.frameMod(loop);
@@ -283,7 +283,7 @@ const DaAMT = ({ children, bright, color }) => {
           position: 'absolute',
           left: '0',
           top: '0',
-          zIndex: '-10',
+          zIndex: '-1',
           width: '100%',
           height: '100vh',
         }}
