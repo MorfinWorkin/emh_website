@@ -1,9 +1,14 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
-import jsCer from '../../assets/certificateJS.webp';
-import reactCer from '../../assets/certificateReact.webp';
-import cssCer from '../../assets/certificateCSS.webp';
-import wip from '../../assets/inProgress.webp';
+import jsCer from '../../assets/certificates/certificateJS.webp';
+import reactCer from '../../assets/certificates/certificateReact.webp';
+import cssCer from '../../assets/certificates/certificateCSS.webp';
+import wip from '../../assets/certificates/inProgress.webp';
+import techNature1 from '../../assets/techNature/tech-nature1.webp';
+import techNature2 from '../../assets/techNature/tech-nature2.webp';
+import techNature3 from '../../assets/techNature/tech-nature3.webp';
+import techNature4 from '../../assets/techNature/tech-nature4.webp';
+import techNature5 from '../../assets/techNature/tech-nature5.webp';
 
 const DaWrapper = styled.div`
   display: flex;
@@ -11,25 +16,27 @@ const DaWrapper = styled.div`
   align-items: center;
   justify-content: center;
   margin-inline: auto;
-  margin-top: 2%;
+  margin-top: 1%;
 `;
 
 const CardImg = styled.div`
   background-image: ${({ bgImg }) => (bgImg ? `url(${bgImg})` : `url(${wip})`)};
-  background-size: cover;
+  background-size: 100%;
   background-position: center;
-  background-repeat: no-repeat;
+  border-radius: 0px;
   height: 80vh;
-  border-radius: 50px;
-  color: #fff;
+  color: #000;
   cursor: pointer;
-  flex: 0.7;
-  margin: 5px;
+  flex: 1;
+  margin-inline: 0.5vmin;
   object-fit: contain;
   position: relative;
-  -webkit-transition: all 700ms ease-in;
+  transition: all 750ms ease-in-out, background-image 450ms;
   &.active {
     flex: 5;
+    margin-inline: 10px;
+    border-radius: 10px;
+    background-size: cover;
     background-image: ${({ activeImg }) =>
       activeImg
         ? `url(${activeImg})`
@@ -38,11 +45,12 @@ const CardImg = styled.div`
 `;
 
 const ExpandingCards = () => {
-  const cards = document.querySelectorAll('.card');
-
   useEffect(() => {
+    const cards = document.querySelectorAll('.card');
+
     const removeActiveClasses = () => {
       cards.forEach((card) => {
+        console.log(card);
         card.classList.remove('active');
       });
     };
@@ -53,22 +61,26 @@ const ExpandingCards = () => {
     };
 
     cards.forEach((card) => {
-      card.addEventListener('pointerdown', onPointerDown(card));
+      card.addEventListener('pointerdown', () => onPointerDown(card));
     });
     return () => {
       cards.forEach((card) => {
-        card.removeEventListener('pointerdown', onPointerDown(card));
+        card.removeEventListener('pointerdown', () => onPointerDown(card));
       });
     };
-  }, [cards]);
+  }, []);
   return (
     <>
       <DaWrapper className='cards-wrapper'>
-        <CardImg className='card active' activeImg={reactCer} />
-        <CardImg className='card' activeImg={jsCer} />
-        <CardImg className='card' activeImg={cssCer} />
-        <CardImg className='card' activeImg={jsCer} />
-        <CardImg className='card' activeImg={jsCer} />
+        <CardImg
+          className='card active'
+          bgImg={techNature1}
+          activeImg={reactCer}
+        />
+        <CardImg className='card' bgImg={techNature2} activeImg={jsCer} />
+        <CardImg className='card' bgImg={techNature3} activeImg={cssCer} />
+        <CardImg className='card' bgImg={techNature4} activeImg={jsCer} />
+        <CardImg className='card' bgImg={techNature5} activeImg={jsCer} />
       </DaWrapper>
     </>
   );
